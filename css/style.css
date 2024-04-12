@@ -251,7 +251,8 @@ body {
   position: relative;
   width: 1.875rem;
   height: 1.125rem;
-  z-index: 5
+  z-index: 5;
+  margin: auto
 }
 @media (any-hover:none) {
   .icon-menu {
@@ -340,7 +341,13 @@ body::after {
   background: url(../img/wahrenkorb/Hintergrundbild.jpg) center center/cover no-repeat;
   overflow: hidden
 }
-@media (max-width:61.99875em) {
+@media only screen and (max-width:61.99875em) and (orientation:landscape) {
+  .popup__wrapper {
+    background: url(../img/wahrenkorb/Hintergrundbild.jpg) center center/cover no-repeat;
+    justify-content: flex-end
+  }
+}
+@media only screen and (max-width:61.99875em) and (orientation:portrait) {
   .popup__wrapper {
     background: url(../img/wahrenkorb/Streifen.jpg) center center/cover no-repeat;
     justify-content: flex-end
@@ -354,6 +361,11 @@ body::after {
   height: 100%;
   width: 20vw;
   left: 0
+}
+@media (max-width:61.99875em) {
+  .popup__wrapper::before {
+    display: none
+  }
 }
 .popup__wrapper::after {
   content: "";
@@ -409,7 +421,11 @@ body::after {
   height: 35px;
   flex: 0 0 35px;
   margin-left: auto;
-  font-size: 34px
+  font-size: 34px;
+  outline: 0;
+  border: none;
+  -webkit-transform: translate(10px,0);
+  transform: translate(10px,0)
 }
 .popup__title {
   font-family: "Playfair Display";
@@ -458,7 +474,8 @@ body::after {
   margin-left: auto;
   width: 20px;
   height: 20px;
-  font-size: 18px
+  font-size: 20px;
+  text-align: right
 }
 @media (any-hover:hover) {
   .popup .item__delete .delete-icon:hover {
@@ -808,6 +825,23 @@ body::after {
 @media (any-hover:hover) {
   .menu__link:hover {
     color: #010101
+  }
+}
+.cart-icon-mobile {
+  display: none
+}
+@media (max-width:61.99875em) {
+  .cart-icon-mobile {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10
+  }
+  .cart-icon-mobile img {
+    width: 100%;
+    height: 100%
   }
 }
 .footer {
@@ -2548,18 +2582,18 @@ body::after {
 }
 @media (min-width:114.375em) {
   .section-8 .contacts__title {
-    font-size: 3.125rem
+    font-size: 3rem
   }
 }
 @media (min-width:20em) and (max-width:114.375em) {
-  @supports (font-size:clamp(1.25rem ,0.8526490066rem + 1.9867549669vw ,3.125rem)) {
+  @supports (font-size:clamp(1.25rem ,0.8791390728rem + 1.8543046358vw ,3rem)) {
     .section-8 .contacts__title {
-      font-size: clamp(1.25rem ,.8526490066rem + 1.9867549669vw ,3.125rem)
+      font-size: clamp(1.25rem ,.8791390728rem + 1.8543046358vw ,3rem)
     }
   }
-  @supports not (font-size:clamp(1.25rem ,0.8526490066rem + 1.9867549669vw ,3.125rem)) {
+  @supports not (font-size:clamp(1.25rem ,0.8791390728rem + 1.8543046358vw ,3rem)) {
     .section-8 .contacts__title {
-      font-size: calc(1.25rem + 1.875 * (100vw - 20rem)/ 94.375)
+      font-size: calc(1.25rem + 1.75 * (100vw - 20rem)/ 94.375)
     }
   }
 }
@@ -2582,8 +2616,13 @@ body::after {
 }
 .section-8 .map {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   background: url(../img/map.jpg) center center/cover no-repeat
+}
+@media (max-width:47.99875em) {
+  .section-8 .map {
+    min-height: 320px
+  }
 }
 .section-8 .google-button {
   font-family: "Merriweather Sans";
@@ -2616,7 +2655,18 @@ body::after {
 }
 @media (max-width:61.99875em) {
   .section-8 .google-button {
-    right: 10%
+    right: 10%;
+    bottom: 50px
+  }
+}
+@media (max-width:47.99875em) {
+  .section-8 .google-button {
+    bottom: 40px
+  }
+}
+@media (max-width:29.99875em) {
+  .section-8 .google-button {
+    bottom: 30px
   }
 }
 .section-8 .social-links {
@@ -2634,6 +2684,12 @@ body::after {
 @media (max-width:47.99875em) {
   .section-8 .social-links {
     margin-top: 40px
+  }
+}
+@media (max-width:29.99875em) {
+  .section-8 .social-links {
+    margin-top: 30px;
+    gap: 50px
   }
 }
 .section-8 .social-links .button {

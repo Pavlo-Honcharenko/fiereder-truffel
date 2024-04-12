@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240411044828">
+	<link rel="stylesheet" href="css/style.css?_v=20240412220202">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,11 @@
 						<li class="header__item"><a href="" data-goto=".section-5" class="header__link">Trüffelbäume</a></li>
 						<li class="header__item"><a href="#" data-popup="#informationen" class="link header__link">Warenkorb</a></li>
 					</ul>
+					<div class="cart-icon-mobile">
+						<a href="#" data-popup="#informationen" class="link header__link">
+							<img src="img/cart.svg" alt="cart">
+						</a>
+					</div>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
@@ -32,15 +37,14 @@
 							<li class="menu__item"><a href="" data-goto=".section-5" class="menu__link">Trüffelbäume</a></li>
 							<li class="menu__item"><a href="" data-goto=".section-7" class="menu__link">Kochen mit Trüffel</a></li>
 							<li class="menu__item"><a href="" data-goto=".section-8" class="menu__link">Kontaktieren Sie uns</a></li>
-							<li class="menu__item"><a href="#" data-popup="#popup" class="link header__link">Warenkorb</a></li>
 							<li class="menu__item menu__item--bottom menu__item--right"><a href="" class="menu__link">Datenschutyerklärung</a></li>
 							<li class="menu__item menu__item--right"><a href="" class="menu__link">Was sonst nicht nötig ist</a></li>
 						</ul>
 					</nav>
 				</div>
 			</div>
+			<!-- These links "popup-links" must be present in the HTML code so that the pop-up windows work correctly, they are not visible to users, but they are needed only for the script: -->
 			<div class="popup-links">
-				<a href="#" data-popup="#informationen" class="link header__link">Warenkorb</a>
 				<a href="#" data-popup="#zahlung" class="link header__link">Zahlung</a>
 				<a href="#" data-popup="#danke" class="link header__link">Danke</a>
 			</div>
@@ -1503,15 +1507,15 @@
 					<div class="contacts__title">
 						Kontaktieren Sie uns und sehen Sie sich die Plantage Vorort an.
 					</div>
-					<p>Telefon: 0660 4202713</p>
-					<p>E-Mail: eisenstoeck.thomas@gmail.com</p>
+					<p>Telefon: <a href="tel:06604202713>0660 4202713</a></p>
+						<p>E-Mail: <a href=" mailto:eisenstoeck.thomas@gmail.com">eisenstoeck.thomas@gmail.com</a></p>
 
 					<div class="social-links">
 						<a href="#" class="button">
 							<img src="img/facebook.svg" alt="">
 						</a>
 						<a href="#" class="button">
-							<img src="img/square-instagram.svg" alt="">
+							<img src="img/instagram.svg" alt="">
 						</a>
 						<a href="#" class="button">
 							<img src="img/youtube.svg" alt="">
@@ -1648,7 +1652,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240411044828"></script>
+	<script src="js/app.js?_v=20240412220202"></script>
 </body>
 
 </html>
