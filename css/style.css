@@ -411,6 +411,11 @@ body::after {
     min-height: 100vh
   }
 }
+@media (max-width:29.99875em) {
+  .popup__content {
+    padding: 30px
+  }
+}
 .popup__content {
   display: flex;
   flex-direction: column;
@@ -503,7 +508,13 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px
+  gap: 30px;
+  padding: 0 0 20px 0
+}
+@media (max-width:29.99875em) {
+  .popup .bottom-row a {
+    width: 100%
+  }
 }
 .popup .bottom-row__price {
   font-size: 30px;
@@ -535,6 +546,12 @@ body::after {
     transform: scale(1.03)
   }
 }
+@media (max-width:29.99875em) {
+  .popup .bottom-row__button {
+    padding: 3px 10px;
+    width: 100%
+  }
+}
 .popup-links {
   height: 0;
   opacity: 0;
@@ -543,7 +560,9 @@ body::after {
 .cards {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap
 }
 .cards__title {
   font-weight: 500;
@@ -559,7 +578,8 @@ body::after {
 .cards__icons {
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
+  flex-wrap: wrap
 }
 .cards__icons img {
   width: 50px
@@ -583,6 +603,11 @@ body::after {
 .zahlung__row {
   display: flex;
   gap: 15px
+}
+@media (max-width:29.99875em) {
+  .zahlung__row {
+    flex-wrap: wrap
+  }
 }
 .ibg {
   position: absolute;
@@ -1949,7 +1974,7 @@ body::after {
 }
 @media (max-width:61.99875em) {
   .section-5 {
-    background: url(../img/4_Trüffelbäume_Bild_1.jpg) center center/cover no-repeat
+    background: url(../img/4_Trüffelbäume_Bild_1.jpg) left center/cover no-repeat
   }
 }
 @media (max-width:47.99875em) {
@@ -1976,20 +2001,20 @@ body::after {
   }
 }
 @media (min-width:20em) and (max-width:114.375em) {
-  @supports (font-size:clamp(2.5rem ,1.7052980132rem + 3.9735099338vw ,6.25rem)) {
+  @supports (font-size:clamp(3rem ,2.3112582781rem + 3.4437086093vw ,6.25rem)) {
     .section-5__title {
-      font-size: clamp(2.5rem ,1.7052980132rem + 3.9735099338vw ,6.25rem)
+      font-size: clamp(3rem ,2.3112582781rem + 3.4437086093vw ,6.25rem)
     }
   }
-  @supports not (font-size:clamp(2.5rem ,1.7052980132rem + 3.9735099338vw ,6.25rem)) {
+  @supports not (font-size:clamp(3rem ,2.3112582781rem + 3.4437086093vw ,6.25rem)) {
     .section-5__title {
-      font-size: calc(2.5rem + 3.75 * (100vw - 20rem)/ 94.375)
+      font-size: calc(3rem + 3.25 * (100vw - 20rem)/ 94.375)
     }
   }
 }
 @media (max-width:20em) {
   .section-5__title {
-    font-size: 2.5rem
+    font-size: 3rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2129,6 +2154,13 @@ body::after {
   height: 100%;
   overflow: initial
 }
+@media (min-width:1200px) {
+  .baum-cathegory__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+}
 .baum-cathegory-slider {
   width: 100%;
   height: 150px;
@@ -2137,6 +2169,17 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center
+}
+@media (min-width:1200px) {
+  .baum-cathegory-slider {
+    flex: 0 0 400px;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
 }
 @media (max-width:61.99875em) {
   .baum-cathegory-slider {
@@ -2157,6 +2200,11 @@ body::after {
 }
 .baum-cathegory-slider__slider {
   max-width: 1400px
+}
+@media (min-width:1200px) {
+  .baum-cathegory-slider__slider {
+    height: 80vh
+  }
 }
 @media (max-width:em(1300)) {
   .baum-cathegory-slider__slider {
@@ -2195,7 +2243,8 @@ body::after {
 .baum-cathegory-slider .swiper-button-next,
 .baum-cathegory-slider .swiper-button-prev {
   height: 30px;
-  color: #676767
+  color: #676767;
+  background-color: rgba(255,255,255,.627)
 }
 .baum-cathegory-slider .swiper-button-next::after,
 .baum-cathegory-slider .swiper-button-prev::after {
@@ -2205,6 +2254,24 @@ body::after {
   .baum-cathegory-slider .swiper-button-next,
   .baum-cathegory-slider .swiper-button-prev {
     display: none
+  }
+}
+@media (min-width:1200px) {
+  .baum-cathegory-slider .swiper-button-prev {
+    left: calc(50% - 13px);
+    top: 30px;
+    bottom: initial;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+}
+@media (min-width:1200px) {
+  .baum-cathegory-slider .swiper-button-next {
+    right: calc(50% - 13px);
+    top: initial;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
   }
 }
 .baum-cathegory-slider .swiper-slide {
